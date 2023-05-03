@@ -1,0 +1,10 @@
+D:\projects\superCalculator\superCalculator\bin\Debug\superCalculator.exe.config
+D:\projects\superCalculator\superCalculator\bin\Debug\superCalculator.exe
+D:\projects\superCalculator\superCalculator\bin\Debug\superCalculator.pdb
+D:\projects\superCalculator\superCalculator\obj\Debug\superCalculator.csprojAssemblyReference.cache
+D:\projects\superCalculator\superCalculator\obj\Debug\superCalculator.Properties.Resources.resources
+D:\projects\superCalculator\superCalculator\obj\Debug\superCalculator.csproj.GenerateResource.cache
+D:\projects\superCalculator\superCalculator\obj\Debug\superCalculator.csproj.CoreCompileInputs.cache
+D:\projects\superCalculator\superCalculator\obj\Debug\superCalculator.exe
+D:\projects\superCalculator\superCalculator\obj\Debug\superCalculator.pdb
+D:\projects\superCalculator\superCalculator\obj\Debug\superCalculator.Form1.resources
