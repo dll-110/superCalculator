@@ -8,3 +8,14 @@ D:\projects\superCalculator\superCalculator\obj\Debug\superCalculator.csproj.Cor
 D:\projects\superCalculator\superCalculator\obj\Debug\superCalculator.exe
 D:\projects\superCalculator\superCalculator\obj\Debug\superCalculator.pdb
 D:\projects\superCalculator\superCalculator\obj\Debug\superCalculator.Form1.resources
+D:\project\superCalculator\superCalculator\bin\Debug\superCalculator.exe.config
+D:\project\superCalculator\superCalculator\bin\Debug\superCalculator.exe
+D:\project\superCalculator\superCalculator\bin\Debug\superCalculator.pdb
+D:\project\superCalculator\superCalculator\obj\Debug\superCalculator.csproj.AssemblyReference.cache
+D:\project\superCalculator\superCalculator\obj\Debug\superCalculator.csproj.SuggestedBindingRedirects.cache
+D:\project\superCalculator\superCalculator\obj\Debug\superCalculator.Form1.resources
+D:\project\superCalculator\superCalculator\obj\Debug\superCalculator.Properties.Resources.resources
+D:\project\superCalculator\superCalculator\obj\Debug\superCalculator.csproj.GenerateResource.cache
+D:\project\superCalculator\superCalculator\obj\Debug\superCalculator.csproj.CoreCompileInputs.cache
+D:\project\superCalculator\superCalculator\obj\Debug\superCalculator.exe
+D:\project\superCalculator\superCalculator\obj\Debug\superCalculator.pdb

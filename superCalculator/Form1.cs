@@ -18,6 +18,8 @@ namespace superCalculator
             InitializeComponent();
         }
 
+
+
         decimal lastResult = 0;
 
 
@@ -44,26 +46,13 @@ namespace superCalculator
             // 设置本窗体为活动窗体
             SetActiveWindow(this.Handle);
             SetForegroundWindow(this.Handle);
-
+            this.KeyPreview = true;
             // 设置窗体置顶
             this.TopMost = true;
         }
 
-        private decimal Calculate(string input)
+        public void OnKeyDown(object sender, KeyEventArgs e)
         {
-            // 利用DataTable的Compute方法计算表达式的结果
-            if (!input.Trim().Equals(""))
-            {
-                DataTable dt = new DataTable();
-                object result = dt.Compute(input, "");
-                return Convert.ToDecimal(result);
-            }
-            return 0;
-        }
-
-        private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
             try
             {
                 int cursorLine = richTextBox1.GetLineFromCharIndex(richTextBox1.SelectionStart);
@@ -78,9 +67,8 @@ namespace superCalculator
                     end = richTextBox1.Text.Length;
                 }
                 string lineT = richTextBox1.Text.Substring(start, end - start);
-
-
-                if (e.KeyChar == '=' || e.KeyChar == 13 || (e.KeyChar == '+' && lineT.EndsWith("+")))
+                                               
+                if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Oemplus || (e.KeyCode == Keys.Add && lineT.EndsWith("+")))
                 {
                     // 提取等号前面的内容
                     string input = richTextBox1.Lines.LastOrDefault();
@@ -122,12 +110,12 @@ namespace superCalculator
                 // 如果当前光标位置在行首，则表示当前行是新的一行
                 bool isNewLine = cursorPos == lineStartPos;
 
-                if (e.KeyChar == '+' && lineT.EndsWith("+"))
+                if (e.KeyCode == Keys.Add && lineT.EndsWith("+"))
                 {
                     return;
                 }
 
-                if ((e.KeyChar == '+' || e.KeyChar == '-' || e.KeyChar == '*' || e.KeyChar == '/') && isNewLine)
+                if ((e.KeyCode == Keys.Add || e.KeyCode == Keys.Subtract || e.KeyCode == Keys.Multiply || e.KeyCode == Keys.Divide) && isNewLine)
                 {
                     // 复制上一行结果到当前行符号的前面
                     string lastLine = richTextBox1.Lines.LastOrDefault();
@@ -138,10 +126,29 @@ namespace superCalculator
                     //}
                 }
             }
-            catch(Exception err)
+            catch (Exception err)
             {
                 this.toolStripStatusLabel1.Text = err.Message;
             }
+        }
+
+
+
+        private decimal Calculate(string input)
+        {
+            // 利用DataTable的Compute方法计算表达式的结果
+            if (!input.Trim().Equals(""))
+            {
+                DataTable dt = new DataTable();
+                object result = dt.Compute(input, "");
+                return Convert.ToDecimal(result);
+            }
+            return 0;
+        }
+
+        private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
         }
 
         private void richTextBox1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -179,10 +186,17 @@ namespace superCalculator
             int column = richTextBox1.SelectionStart - index + 1;
 
 
-
-
             this.toolStripStatusLabel1.Text = string.Format("第：{0}行 {1}列,{2}", line.ToString(), column.ToString(), index.ToString());
         }
 
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
     }
 }
